@@ -7,8 +7,8 @@ spring:
   jpa:
     open-in-view: false
     hibernate:
-#      ddl-auto: validate
-      ddl-auto: create-drop
+      ddl-auto: validate
+#      ddl-auto: create
     properties:
       hibernate:
         order_updates: true
@@ -22,3 +22,7 @@ spring:
     url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB_NAME:todo}
     username: ${POSTGRES_USERNAME:postgres}
     password: ${POSTGRES_PASSWORD:123}
+
+token:
+  signing:
+    key: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855
