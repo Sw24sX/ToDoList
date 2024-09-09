@@ -17,7 +17,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.cors.CorsConfiguration;
 import ru.sw24sx.todolist.adapter.web.filter.JwtAuthenticationFilter;
-import ru.sw24sx.todolist.service.UserService;
+import ru.sw24sx.todolist.service.security.UserService;
 
 import java.util.List;
 

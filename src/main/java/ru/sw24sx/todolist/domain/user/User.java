@@ -1,4 +1,4 @@
-package ru.sw24sx.todolist.domain;
+package ru.sw24sx.todolist.domain.user;
 
 import jakarta.persistence.*;
 import lombok.*;

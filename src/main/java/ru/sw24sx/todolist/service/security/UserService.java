@@ -1,4 +1,4 @@
-package ru.sw24sx.todolist.service;
+package ru.sw24sx.todolist.service.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.sw24sx.todolist.adapter.repository.UserRepository;
-import ru.sw24sx.todolist.domain.User;
+import ru.sw24sx.todolist.domain.user.User;
 
 @Service
 @RequiredArgsConstructor

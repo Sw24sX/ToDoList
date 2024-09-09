@@ -1,11 +1,11 @@
-package ru.sw24sx.todolist.service;
+package ru.sw24sx.todolist.service.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import ru.sw24sx.todolist.domain.User;
+import ru.sw24sx.todolist.domain.user.User;
 import ru.sw24sx.todolist.domain.user.Role;
 import ru.sw24sx.todolist.dto.web.JwtAuthenticationResponse;
 import ru.sw24sx.todolist.dto.web.SignInRequest;

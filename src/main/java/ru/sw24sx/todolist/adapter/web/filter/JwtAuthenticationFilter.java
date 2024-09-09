@@ -12,8 +12,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import ru.sw24sx.todolist.service.JwtService;
-import ru.sw24sx.todolist.service.UserService;
+import ru.sw24sx.todolist.service.security.JwtService;
+import ru.sw24sx.todolist.service.security.UserService;
 
 import java.io.IOException;
 

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.sw24sx.todolist.dto.web.JwtAuthenticationResponse;
 import ru.sw24sx.todolist.dto.web.SignInRequest;
 import ru.sw24sx.todolist.dto.web.SignUpRequest;
-import ru.sw24sx.todolist.service.AuthenticationService;
+import ru.sw24sx.todolist.service.security.AuthenticationService;
 
 @RestController
 @RequestMapping("/api/v1/auth")

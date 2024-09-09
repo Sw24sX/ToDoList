@@ -1,4 +1,4 @@
-package ru.sw24sx.todolist.service;
+package ru.sw24sx.todolist.service.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -8,7 +8,7 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
-import ru.sw24sx.todolist.domain.User;
+import ru.sw24sx.todolist.domain.user.User;
 
 import javax.crypto.SecretKey;
 import java.util.Date;
