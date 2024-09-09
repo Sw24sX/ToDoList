@@ -31,7 +31,7 @@ public class ToDo extends BaseEntity {
 
     @Column(name = "created_at")
     @CreatedDate
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDateTime createdAt;
 
 
     @ManyToOne
