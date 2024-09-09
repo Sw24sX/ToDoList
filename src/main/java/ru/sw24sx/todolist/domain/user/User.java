@@ -5,7 +5,8 @@ import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import ru.sw24sx.todolist.domain.user.Role;
+import ru.sw24sx.todolist.domain.BaseEntity;
+import ru.sw24sx.todolist.dto.domain.Role;
 
 import java.util.Collection;
 import java.util.List;
@@ -17,13 +18,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "users")
-public class User implements UserDetails {
+public class User extends BaseEntity implements UserDetails {
 
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_id_seq")
-    @SequenceGenerator(name = "user_id_seq", sequenceName = "user_id_seq", allocationSize = 1)
-    private Long id;
+
 
     @Column(name = "password", nullable = false)
     private String password;
