@@ -1,4 +1,4 @@
-package ru.sw24sx.todolist.dto.web;
+package ru.sw24sx.todolist.dto.web.security;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

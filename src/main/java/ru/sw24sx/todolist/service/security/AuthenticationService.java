@@ -7,9 +7,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.sw24sx.todolist.domain.user.User;
 import ru.sw24sx.todolist.dto.domain.Role;
-import ru.sw24sx.todolist.dto.web.JwtAuthenticationResponse;
-import ru.sw24sx.todolist.dto.web.SignInRequest;
-import ru.sw24sx.todolist.dto.web.SignUpRequest;
+import ru.sw24sx.todolist.dto.web.security.JwtAuthenticationResponse;
+import ru.sw24sx.todolist.dto.web.security.SignInRequest;
+import ru.sw24sx.todolist.dto.web.security.SignUpRequest;
 
 @Service
 @RequiredArgsConstructor
