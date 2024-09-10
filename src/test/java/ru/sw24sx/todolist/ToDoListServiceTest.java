@@ -1,12 +1,10 @@
 package ru.sw24sx.todolist;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.internal.matchers.CapturesArguments;
 import org.springframework.boot.test.context.SpringBootTest;
 import ru.sw24sx.todolist.adapter.repository.ToDoRepository;
 import ru.sw24sx.todolist.domain.todo.ToDo;
@@ -14,7 +12,6 @@ import ru.sw24sx.todolist.domain.user.User;
 import ru.sw24sx.todolist.dto.domain.ToDoState;
 import ru.sw24sx.todolist.dto.web.todo.ToDoCreateRequest;
 import ru.sw24sx.todolist.dto.web.todo.ToDoDeleteRequest;
-import ru.sw24sx.todolist.dto.web.todo.ToDoEntry;
 import ru.sw24sx.todolist.dto.web.todo.ToDoUpdateRequest;
 import ru.sw24sx.todolist.service.ToDoListService;
 

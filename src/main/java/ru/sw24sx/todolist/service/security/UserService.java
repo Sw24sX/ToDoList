@@ -38,10 +38,4 @@ public class UserService {
     public UserDetailsService userDetailsService() {
         return this::getByEmail;
     }
-
-    public User getCurrentUser() {
-        // Получение имени пользователя из контекста Spring Security
-        var username = SecurityContextHolder.getContext().getAuthentication().getName();
-        return getByEmail(username);
-    }
 }

@@ -8,7 +8,6 @@ import ru.sw24sx.todolist.domain.user.User;
 import ru.sw24sx.todolist.dto.domain.ToDoState;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
 @Builder
@@ -32,7 +31,6 @@ public class ToDo extends BaseEntity {
     @Column(name = "created_at")
     @CreatedDate
     private LocalDateTime createdAt;
-
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
