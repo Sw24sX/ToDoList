@@ -18,9 +18,9 @@ public class ToDoController {
     private final ToDoListService toDoListService;
 
     @GetMapping
-    public List<ToDoEntry> getAll(@AuthenticationPrincipal User user, @RequestBody ToDoFilterRequest request) {
+    public List<ToDoEntry> getAll(@AuthenticationPrincipal User user) {
 
-        return toDoListService.getAll(request, user);
+        return toDoListService.getAll(user);
     }
 
     @PostMapping

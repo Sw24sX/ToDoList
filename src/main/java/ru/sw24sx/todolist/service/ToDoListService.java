@@ -20,7 +20,7 @@ public class ToDoListService {
 
     private final ToDoRepository toDoRepository;
 
-    public List<ToDoEntry> getAll(ToDoFilterRequest request, User user) {
+    public List<ToDoEntry> getAll(User user) {
 
         return toDoRepository.findAllByUser(user).stream()
                 .map(ToDoEntry::of)
