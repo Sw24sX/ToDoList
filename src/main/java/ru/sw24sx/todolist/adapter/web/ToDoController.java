@@ -1,5 +1,6 @@
 package ru.sw24sx.todolist.adapter.web;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
@@ -16,8 +17,14 @@ public class ToDoController {
 
     private final ToDoListService toDoListService;
 
+    @GetMapping
+    public List<ToDoEntry> getAll(@AuthenticationPrincipal User user, @RequestBody ToDoFilterRequest request) {
+
+        return toDoListService.getAll(request, user);
+    }
+
     @PostMapping
-    public ToDoEntry create(@AuthenticationPrincipal User user, @RequestBody ToDoCreateRequest request) {
+    public ToDoEntry create(@AuthenticationPrincipal User user, @Valid @RequestBody ToDoCreateRequest request) {
 
         return toDoListService.create(request, user);
     }
@@ -26,18 +33,13 @@ public class ToDoController {
     public ToDoEntry update(
             @AuthenticationPrincipal User user,
             @PathVariable Long id,
-            @RequestBody ToDoUpdateRequest updateRequest) {
+            @Valid @RequestBody ToDoUpdateRequest updateRequest) {
 
         return toDoListService.update(id, updateRequest, user);
     }
-    @GetMapping
-    public List<ToDoEntry> getAll(@AuthenticationPrincipal User user, @RequestBody ToDoFilterRequest request) {
-
-        return toDoListService.getAll(request, user);
-    }
 
     @DeleteMapping
-    public void delete(@AuthenticationPrincipal User user, @RequestBody ToDoDeleteRequest request) {
+    public void delete(@AuthenticationPrincipal User user, @Valid @RequestBody ToDoDeleteRequest request) {
 
         toDoListService.deleteAllByIds(request, user);
     }
