@@ -1,7 +1,6 @@
 package ru.sw24sx.todolist.dto.web;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
 
 import java.util.Collection;
