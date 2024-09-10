@@ -1,12 +1,8 @@
 package ru.sw24sx.todolist.dto.web.todo;
 
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.Builder;
 import lombok.Data;
 import ru.sw24sx.todolist.domain.todo.ToDo;
-import ru.sw24sx.todolist.domain.user.User;
 import ru.sw24sx.todolist.dto.domain.ToDoState;
 
 import java.time.LocalDateTime;
