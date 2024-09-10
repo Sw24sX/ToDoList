@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="2024-09-10-20-03" author="KorolyovAS" context="prod">
+
+        <createSequence sequenceName="hibernate_seq"/>
+
+        <createTable tableName="users">
+
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="user_pk"/>
+            </column>
+
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+
+            <column name="password" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="role" type="VARCHAR(25)">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <createTable tableName="todo">
+
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="todo_pk"/>
+            </column>
+
+            <column name="created_at" type="TIMESTAMP">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="description" type="TEXT">
+                <constraints nullable="true"/>
+            </column>
+
+            <column name="header" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="state" type="VARCHAR(25)">
+                <constraints nullable="false"/>
+            </column>
+
+            <column name="user_id" type="BIGINT">
+                <constraints nullable="false"
+                             foreignKeyName="todo_user_fk"
+                             referencedTableName="users"
+                             referencedColumnNames="id"/>
+            </column>
+
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

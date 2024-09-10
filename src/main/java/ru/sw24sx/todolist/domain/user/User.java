@@ -20,16 +20,14 @@ import java.util.List;
 @Table(name = "users")
 public class User extends BaseEntity implements UserDetails {
 
-
-
-    @Column(name = "password", nullable = false)
+    @Column(name = "password")
     private String password;
 
-    @Column(name = "email", unique = true, nullable = false)
+    @Column(name = "email")
     private String email;
 
+    @Column(name = "role")
     @Enumerated(EnumType.STRING)
-    @Column(name = "role", nullable = false)
     private Role role;
 
     @Override

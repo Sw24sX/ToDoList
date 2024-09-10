@@ -1,14 +1,12 @@
 spring:
   application:
     name: todolist
-  profiles:
-    active: dev
 
   jpa:
     open-in-view: false
     hibernate:
-#      ddl-auto: validate
-      ddl-auto: update
+      ddl-auto: validate
+#      ddl-auto: update
     properties:
       hibernate:
         order_updates: true
@@ -22,6 +20,9 @@ spring:
     url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB_NAME:todo}
     username: ${POSTGRES_USERNAME:postgres}
     password: ${POSTGRES_PASSWORD:123}
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
 
 token:
   signing:
